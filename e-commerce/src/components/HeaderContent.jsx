@@ -1,4 +1,3 @@
-import { Button } from "@mui/material";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
 import ChevronRightIcon from "@mui/icons-material/ChevronRight";
@@ -41,14 +40,10 @@ function HeaderContent() {
         </div>
       </div>
       <div class="my-24">
-        <Button
-          variant="contained"
-          color="error"
-          sx={{ padding: "15px 50px", textTransform: "capitalize" }}
-        >
+        <button class="bg-red-500 w-1/6 p-2 rounded-md">
           Explore{" "}
           <ArrowForwardIosIcon sx={{ fontSize: "12px", marginLeft: "15%" }} />
-        </Button>
+        </button>
       </div>
       <div>
         <Brands />

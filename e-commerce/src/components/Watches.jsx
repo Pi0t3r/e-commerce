@@ -51,7 +51,7 @@ function ShowWatches() {
             </div>
           </div>
         ))}
-        <div class="w-full">
+        <div class="w-full my-10 pb-20">
           <ReactPaginate className="Paginate"
             previousLabel={"poprzednia"}
             nextLabel={"następna"}
