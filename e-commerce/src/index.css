@@ -6,3 +6,9 @@ body {
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.Paginate {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
