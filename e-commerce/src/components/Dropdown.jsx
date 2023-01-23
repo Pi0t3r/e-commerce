@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 
-function MyDropdown({ name, number }) {
+function MyDropdown({ name, number, handleSort }) {
   const [expanded, setExpanded] = useState(false);
   const options = [
     [
@@ -19,9 +19,9 @@ function MyDropdown({ name, number }) {
     [
       "by name (A-Z)",
       "by name (Z-A)",
-      "by price(low to higth)",
+      "by price(low to hight)",
       "by price(high to low)",
-      "by year (low to high",
+      "by year (low to hight",
       "by year (high to low",
     ],
   ];
@@ -35,11 +35,12 @@ function MyDropdown({ name, number }) {
       </button>
       {expanded && (
         <ul class="border-solid border-2 mt-2 rounded-md text-center absolute w-36 bg-slate-100">
-          {options[number].map((option, index) => (
-            <li key={index} class="hover:bg-slate-200 cursor-pointer">
-              <option>
-                {option}
-              </option>
+          {options[number].map((option) => (
+            <li
+              class="hover:bg-slate-200 cursor-pointer"
+              onClick={() => handleSort(option)}
+            >
+              {option}
             </li>
           ))}
         </ul>

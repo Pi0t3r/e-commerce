@@ -1,10 +1,23 @@
-import React from "react";
+import React, { useState } from "react";
 import MyDropdown from "./Dropdown";
 import ShowWatches from "./Watches";
+import { Watches } from "../data/watches";
 
-
+const sortWatches = (watches, sortType) => {
+  if (sortType === "by name (A-Z)") {
+    return watches.sort((a, b) => a.name.localeCompare(b.name));
+  }
+  if (sortType === "by name (Z-A)") {
+    return watches.sort((a, b) => b.name.localeCompare(a.name));
+  }
+  return watches;
+};
 
 function Offers() {
+  const [sortedWatches, setSortedWatches] = useState(Watches);
+  const handleSort = (sortType) => {
+    setSortedWatches(sortWatches(Watches, sortType));
+  };
   return (
     <div id="Offers" class="absolute w-full top-full px-10 mb-96">
       <div class="flex flex-col">
@@ -19,27 +32,32 @@ function Offers() {
           </div>
           <div class="flex flex-row justify-between w-2/4 items-start h-20">
             <div>
-              <MyDropdown name="Brands" number={0} />
+              <MyDropdown name="Brands" number={0} sortWatches={sortWatches} />
             </div>
             <div>
-              <MyDropdown name="Series" number={1} />
+              <MyDropdown name="Series" number={1} handleSort={handleSort} />
             </div>
             <div>
-              <MyDropdown name="Case Size" number={2} />
+              <MyDropdown name="Case Size" number={2} handleSort={handleSort} />
             </div>
             <div>
-              <MyDropdown name="Price" number={3} />
+              <MyDropdown name="Price" number={3} handleSort={handleSort} />
             </div>
             <div>
-              <MyDropdown name="Year" number={4} />
+              <MyDropdown name="Year" number={4} handleSort={handleSort} />
             </div>
           </div>
           <div class="w-1/4 flex justify-center">
-            <MyDropdown key={2} name="Sort" number={5} />
+            <MyDropdown
+              key={2}
+              name="Sort"
+              number={5}
+              handleSort={handleSort}
+            />
           </div>
         </div>
         <div>
-          <ShowWatches />
+          <ShowWatches watches={sortedWatches} />
         </div>
       </div>
     </div>
