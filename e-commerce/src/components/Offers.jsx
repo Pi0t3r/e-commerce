@@ -1,9 +1,12 @@
 import React from "react";
 import MyDropdown from "./Dropdown";
 import ShowWatches from "./Watches";
+
+
+
 function Offers() {
   return (
-    <div id="Offers" class="w-full mt-24 px-10 mb-96">
+    <div id="Offers" class="absolute w-full top-full px-10 mb-96">
       <div class="flex flex-col">
         <div class="w-full flex justify-center mb-16">
           <p>All watches</p>
@@ -32,7 +35,7 @@ function Offers() {
             </div>
           </div>
           <div class="w-1/4 flex justify-center">
-            <MyDropdown name="Sort" />
+            <MyDropdown key={2} name="Sort" number={5} />
           </div>
         </div>
         <div>

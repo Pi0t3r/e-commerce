@@ -5,8 +5,10 @@ function App() {
   return (
     <div>
       <Nav />
-      <Header />
-      <Offers />
+      <div>
+        <Header />
+        <Offers />
+      </div>
     </div>
   );
 }

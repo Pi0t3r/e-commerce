@@ -20,7 +20,7 @@ function Nav() {
   }, []);
   return (
     <div
-      class={`sticky top-0 w-full flex flex-row text-slate-500 justify-between p-8 mb-10 ${
+      class={`z-10 fixed top-0 w-full flex flex-row text-slate-500 justify-between p-8 mb-10 ${
         scroll > 200 ? "bg-gray-400" : "text-slate-500"
       }`}
     >

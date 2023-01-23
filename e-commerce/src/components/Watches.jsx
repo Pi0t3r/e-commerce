@@ -34,7 +34,7 @@ function ShowWatches() {
               <p class="text-slate-500">{watch.ProductCode}</p>
             </div>
             <div>
-              <p class="font-medium text-lg">{watch.Price}</p>
+              <p class="font-medium text-lg">${watch.Price}</p>
             </div>
             <div>
               <p class="font-medium">
