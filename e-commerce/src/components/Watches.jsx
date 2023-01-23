@@ -46,7 +46,7 @@ function ShowWatches() {
               </p>
               <p class="font-medium">
                 Year:{" "}
-                <span class="text-slate-500 font-normal">{watch.Year}</span>
+                <span class="text-slate-500 font-normal">Approx. {watch.Year}</span>
               </p>
             </div>
           </div>

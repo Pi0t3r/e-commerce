@@ -19,7 +19,11 @@ function Offers() {
     setSortedWatches(sortWatches(Watches, sortType));
   };
   return (
-    <div id="Offers" class="absolute w-full top-full px-10 mb-96">
+    <div
+      id="Offers"
+      class="absolute w-full top-full px-10 mb-96"
+      style={{ scrollBehavior: "smooth" }}
+    >
       <div class="flex flex-col">
         <div class="w-full flex justify-center mb-16">
           <p>All watches</p>

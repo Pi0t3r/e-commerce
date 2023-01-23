@@ -9,7 +9,7 @@ export const Watches = [
     ProductCode: "33158/000G-9394",
     Box: "Yes",
     Papers: "Yes",
-    Year: "Approx. 2017",
+    Year: 2017,
   },
   {
     id: 2,
@@ -21,7 +21,7 @@ export const Watches = [
     ProductCode: "252.032",
     Box: "Yes",
     Papers: "Yes",
-    Year: "Approx. 2018",
+    Year: 2018,
   },
   {
     id: 3,
@@ -29,11 +29,11 @@ export const Watches = [
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSAdFN_6XBvNbMHZusoDIEcB8Ju6vCLubY76a-7UhjvLlZ5e7fpZQCLK9NQEVWve51TG3c&usqp=CAU",
     name: "IWC",
     Series: "Pilot's Automatic Top Gun",
-    Price: "$4,715",
+    Price: 4715,
     ProductCode: "IW326901",
     Box: "Yes",
     Papers: "Yes",
-    Year: "Approx. 2020",
+    Year: 2020,
   },
   {
     id: 4,
@@ -45,7 +45,7 @@ export const Watches = [
     ProductCode: "2712470",
     Box: "Yes",
     Papers: "Yes",
-    Year: "Approx. 2000",
+    Year: 2000,
   },
   {
     id: 5,
@@ -57,7 +57,7 @@ export const Watches = [
     ProductCode: "116500 LN",
     Box: "Yes",
     Papers: "Yes",
-    Year: "Approx. 2020",
+    Year: 2020,
   },
   {
     id: 6,
@@ -69,7 +69,7 @@ export const Watches = [
     ProductCode: "CAW210.FC6356",
     Box: "Yes",
     Papers: "Yes",
-    Year: "Approx. 2020",
+    Year: 2020,
   },
   {
     id: 7,
@@ -81,7 +81,7 @@ export const Watches = [
     ProductCode: "3810.50.06",
     Box: "Yes",
     Papers: "Yes",
-    Year: "Approx. 2004",
+    Year: 2004,
   },
   {
     id: 8,
@@ -93,7 +93,7 @@ export const Watches = [
     ProductCode: "SBGW231",
     Box: "Yes",
     Papers: "Yes",
-    Year: "Approx. 2020",
+    Year: 2020,
   },
   {
     id: 9,
@@ -105,7 +105,7 @@ export const Watches = [
     ProductCode: "01 774 7727 7154-SET",
     Box: "Yes",
     Papers: "Yes",
-    Year: "Approx. 2021",
+    Year: 2021,
   },
   {
     id: 10,
@@ -117,7 +117,7 @@ export const Watches = [
     ProductCode: "CCP303_SL02",
     Box: "Yes",
     Papers: "Yes",
-    Year: "Approx. 2005",
+    Year: 2005,
   },
   {
     id: 11,
@@ -129,7 +129,7 @@ export const Watches = [
     ProductCode: "FC-718NWWM4H6",
     Box: "Yes",
     Papers: "Yes",
-    Year: "Approx. 2015",
+    Year: 2015,
   },
   {
     id: 12,
@@ -141,7 +141,7 @@ export const Watches = [
     ProductCode: "DG3030B-S1CJ-BE",
     Box: "Yes",
     Papers: "Yes",
-    Year: "Approx. 2018",
+    Year: 2018,
   },
   {
     id: 13,
@@ -153,7 +153,7 @@ export const Watches = [
     ProductCode: "95744.65.31",
     Box: "Yes",
     Papers: "Yes",
-    Year: "Approx. 2000",
+    Year: 2000,
   },
   {
     id: 14,
@@ -165,7 +165,7 @@ export const Watches = [
     ProductCode: "SAMX902_SVSL01",
     Box: "Yes",
     Papers: "Yes",
-    Year: "Approx. 2019",
+    Year: 2019,
   },
   {
     id: 15,
@@ -177,7 +177,7 @@ export const Watches = [
     ProductCode: "3439.322.20.16.30",
     Box: "Yes",
     Papers: "Yes",
-    Year: "Approx. 2021",
+    Year: 2021,
   },
   {
     id: 16,
@@ -189,6 +189,6 @@ export const Watches = [
     ProductCode: "FC-303V4NH2B",
     Box: "Yes",
     Papers: "Yes",
-    Year: "Approx. 2014",
+    Year: 2014,
   },
 ];

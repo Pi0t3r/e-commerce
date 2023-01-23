@@ -2,6 +2,7 @@ import SearchOutlinedIcon from "@mui/icons-material/SearchOutlined";
 import PersonOutlineOutlinedIcon from "@mui/icons-material/PersonOutlineOutlined";
 import LocalMallOutlinedIcon from "@mui/icons-material/LocalMallOutlined";
 import { useState, useEffect } from "react";
+
 const ItemNav = ({ itemTitle, href }) => {
   return (
     <a href={href} class="hover:text-white cursor-pointer transition-colors">
