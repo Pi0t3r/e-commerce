@@ -1,18 +1,22 @@
 import { Watches } from "../data/watches";
 import ReactPaginate from "react-paginate";
-import React, { useState } from "react";
-function ShowWatches() {
+import React, { useEffect, useState } from "react";
+function ShowWatches({ watches }) {
   const [currentPage, setCurrentPage] = useState(0);
+  const [watchesToShow, setWatchesToShow] = useState([]);
   const perPage = 8;
+  const pageCount = Math.ceil(watches.length / perPage);
 
+  useEffect(() => {
+    const watchesSlice = watches.slice(
+      currentPage * perPage,
+      (currentPage + 1) * perPage
+    );
+    setWatchesToShow(watchesSlice);
+  }, [currentPage, watches]);
   const handlePageClick = (data) => {
     setCurrentPage(data.selected);
   };
-
-  const watchesToShow = Watches.slice(
-    currentPage * perPage,
-    (currentPage + 1) * perPage
-  );
 
   return (
     <div>
@@ -46,16 +50,19 @@ function ShowWatches() {
               </p>
               <p class="font-medium">
                 Year:{" "}
-                <span class="text-slate-500 font-normal">Approx. {watch.Year}</span>
+                <span class="text-slate-500 font-normal">
+                  Approx. {watch.Year}
+                </span>
               </p>
             </div>
           </div>
         ))}
         <div class="w-full my-10 pb-20">
-          <ReactPaginate className="Paginate"
+          <ReactPaginate
+            className="Paginate"
             previousLabel={"poprzednia"}
             nextLabel={"następna"}
-            pageCount={2}
+            pageCount={pageCount}
             onPageChange={handlePageClick}
           />
         </div>

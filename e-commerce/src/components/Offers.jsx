@@ -17,6 +17,7 @@ function Offers() {
   const [sortedWatches, setSortedWatches] = useState(Watches);
   const handleSort = (sortType) => {
     setSortedWatches(sortWatches(Watches, sortType));
+    console.log(sortedWatches);
   };
   return (
     <div
@@ -36,10 +37,20 @@ function Offers() {
           </div>
           <div class="flex flex-row justify-between w-2/4 items-start h-20">
             <div>
-              <MyDropdown name="Brands" number={0} sortWatches={sortWatches} />
+              <MyDropdown
+                name="Brands"
+                number={0}
+                sortWatches={sortWatches}
+                handleSort={handleSort}
+              />
             </div>
             <div>
-              <MyDropdown name="Series" number={1} handleSort={handleSort} />
+              <MyDropdown
+                disabled
+                name="Series"
+                number={1}
+                handleSort={handleSort}
+              />
             </div>
             <div>
               <MyDropdown name="Case Size" number={2} handleSort={handleSort} />
