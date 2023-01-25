@@ -21,11 +21,3 @@ body {
 a {
   scroll-behavior: smooth;
 }
-
-/* .shadow {
-  filter: brightness(50%);
-}
-
-.non-shadow {
-  filter: brightness(100%);
-} */
