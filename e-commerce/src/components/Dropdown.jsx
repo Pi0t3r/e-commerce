@@ -20,9 +20,9 @@ function MyDropdown({ name, number, handleSort }) {
       "by name (A-Z)",
       "by name (Z-A)",
       "by price(low to hight)",
-      "by price(high to low)",
+      "by price(hight to low)",
       "by year (low to hight)",
-      "by year (high to low)",
+      "by year (hight to low)",
     ],
   ];
   return (

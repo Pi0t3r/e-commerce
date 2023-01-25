@@ -1,4 +1,4 @@
-import { Watches } from "../data/watches";
+
 import ReactPaginate from "react-paginate";
 import React, { useEffect, useState } from "react";
 function ShowWatches({ watches }) {
@@ -7,16 +7,23 @@ function ShowWatches({ watches }) {
   const perPage = 8;
   const pageCount = Math.ceil(watches.length / perPage);
 
+
+
+  const handlePageClick = (data) => {
+    setCurrentPage(data.selected);
+  };
+
   useEffect(() => {
     const watchesSlice = watches.slice(
       currentPage * perPage,
       (currentPage + 1) * perPage
     );
     setWatchesToShow(watchesSlice);
-  }, [currentPage, watches]);
-  const handlePageClick = (data) => {
-    setCurrentPage(data.selected);
-  };
+  }, [
+    currentPage,
+    watches, //handlePageClick
+  ]);
+  // handlePageClick generate the problem with Maximum update depth exceeded.
 
   return (
     <div>
@@ -63,7 +70,7 @@ function ShowWatches({ watches }) {
             previousLabel={"poprzednia"}
             nextLabel={"następna"}
             pageCount={pageCount}
-            onPageChange={handlePageClick}
+            onPageChange={watches}
           />
         </div>
       </div>

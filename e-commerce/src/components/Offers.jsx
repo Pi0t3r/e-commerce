@@ -10,6 +10,12 @@ const sortWatches = (watches, sortType) => {
   if (sortType === "by name (Z-A)") {
     return watches.sort((a, b) => b.name.localeCompare(a.name));
   }
+  // if (sortType === "by price(low to hight)") {
+  //   return watches.sort((a, b) => a.price - b.price);
+  // }
+  // if (sortType === "by price(hight to low)") {
+  //   return watches.sort((a, b) => b.price - a.price);
+  // }
   return watches;
 };
 

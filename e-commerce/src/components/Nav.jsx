@@ -22,7 +22,7 @@ function Nav() {
   return (
     <div
       class={`z-10 fixed top-0 w-full flex flex-row text-slate-500 justify-between p-8 mb-10 ${
-        scroll > 200 ? "bg-gray-400" : "text-slate-500"
+        scroll > 150 ? "bg-gray-400" : "text-slate-500"
       }`}
     >
       <div class="flex flex-row w-1/6 text-white">
@@ -36,7 +36,7 @@ function Nav() {
       </div>
       <div class="flex flex-row justify-between w-1/6 ">
         <ItemNav itemTitle={<SearchOutlinedIcon />} />
-        <ItemNav itemTitle={<PersonOutlineOutlinedIcon />} />
+        <ItemNav href={"/login"} itemTitle={<PersonOutlineOutlinedIcon />} />
         <ItemNav itemTitle={<LocalMallOutlinedIcon />} />
       </div>
     </div>

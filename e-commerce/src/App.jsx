@@ -1,14 +1,8 @@
-import Header from "./components/Header";
-import Offers from "./components/Offers";
-import Nav from "./components/Nav";
+import MainPage from "./scenes/MainPage";
 function App() {
   return (
     <div>
-      <Nav />
-      <div>
-        <Header />
-        <Offers />
-      </div>
+      <MainPage />
     </div>
   );
 }
