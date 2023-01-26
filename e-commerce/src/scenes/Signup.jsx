@@ -37,7 +37,7 @@ function SignUp() {
         <div class="absolute top-1/2 left-1/2 flex flex-col translate-x-[-50%] translate-y-[-50%] w-2/4 h-3/4 items-center shadow-[10px_0px_136px_-15px_rgba(0,0,0,1)] rounded-md">
           <div class="m-auto w-[90%] h-[90%]">
             <div class="text-center my-4">
-              <h1 class="text-white text-3xl font-bold">Register Form</h1>
+              <h1 class="text-white text-3xl font-bold">Sign Up Form</h1>
             </div>
             <form>
               <InputDiv type={"text"} placeholder={"Name"} />
