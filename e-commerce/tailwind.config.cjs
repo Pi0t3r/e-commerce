@@ -2,6 +2,10 @@
 module.exports = {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
+    screens: {
+      iphoneSe: "320px",
+      GFold: "280px",
+    },
     extend: {
       backgroundImage: {
         mainImage: "url(./images/main-image.jpg)",

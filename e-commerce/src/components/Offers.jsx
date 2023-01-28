@@ -1,82 +1,42 @@
-import React, { useState } from "react";
-import MyDropdown from "./Dropdown";
+import React, { useState, useEffect } from "react";
 import ShowWatches from "./Watches";
 import { Watches } from "../data/watches";
-
-const sortWatches = (watches, sortType) => {
-  if (sortType === "by name (A-Z)") {
-    return watches.sort((a, b) => a.name.localeCompare(b.name));
-  }
-  if (sortType === "by name (Z-A)") {
-    return watches.sort((a, b) => b.name.localeCompare(a.name));
-  }
-  // if (sortType === "by price(low to hight)") {
-  //   return watches.sort((a, b) => a.price - b.price);
-  // }
-  // if (sortType === "by price(hight to low)") {
-  //   return watches.sort((a, b) => b.price - a.price);
-  // }
-  return watches;
-};
-
 function Offers() {
-  const [sortedWatches, setSortedWatches] = useState(Watches);
-  const handleSort = (sortType) => {
-    setSortedWatches(sortWatches(Watches, sortType));
-  };
   return (
-    <div
-      id="Offers"
-      class="absolute w-full top-full px-10 mb-96"
-    >
+    <div id="Offers" class="absolute w-full top-full px-10 mb-96 GFold:mt-2">
       <div class="flex flex-col">
-        <div class="w-full flex justify-center mb-16">
+        <div class="w-full flex justify-center GFold:mb-2">
           <p>All watches</p>
         </div>
-        <div class="w-full flex flex-row items-start justify-center mx-auto">
-          <div class="w-1/4 flex justify-center">
+        <div class="w-full flex flex-row items-start justify-center mx-auto GFold:flex-col">
+          <div class="w-full flex justify-center GFold:my-2">
             <p>
               Results <span>(4328)</span>
             </p>
           </div>
-          <div class="flex flex-row justify-between w-2/4 items-start h-20">
+          <div class="flex flex-row justify-between w-2/4 items-start h-20 GFold:flex-wrap GFold:w-full">
             <div>
-              <MyDropdown
-                name="Brands"
-                number={0}
-                sortWatches={sortWatches}
-                handleSort={handleSort}
-              />
+              <button>przycisk 1</button>
             </div>
             <div>
-              <MyDropdown
-                disabled
-                name="Series"
-                number={1}
-                handleSort={handleSort}
-              />
+              <button>przycisk 2</button>
             </div>
             <div>
-              <MyDropdown name="Case Size" number={2} handleSort={handleSort} />
+              <button>przycisk 3</button>
             </div>
             <div>
-              <MyDropdown name="Price" number={3} handleSort={handleSort} />
+              <button>przycisk 4</button>
             </div>
             <div>
-              <MyDropdown name="Year" number={4} handleSort={handleSort} />
+              <button>przycisk 5</button>
             </div>
           </div>
-          <div class="w-1/4 flex justify-center">
-            <MyDropdown
-              key={2}
-              name="Sort"
-              number={5}
-              handleSort={handleSort}
-            />
+          <div class="flex justify-center">
+            <button>przycisk 6</button>
           </div>
         </div>
         <div>
-          <ShowWatches watches={sortedWatches} />
+          <ShowWatches watches={Watches} />
         </div>
       </div>
     </div>

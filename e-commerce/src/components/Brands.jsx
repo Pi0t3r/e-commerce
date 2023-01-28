@@ -8,7 +8,7 @@ const Brand = ({ brandImage }) => {
 
 function Brands() {
   return (
-    <div class="bg-white w-3/4 h-16 mx-auto flex flex-row justify-between items-center px-6">
+    <div class="bg-white h-16 mx-auto flex flex-row justify-between items-center GFold:mt-6">
       <Brand
         brandImage={
           <img

@@ -5,7 +5,6 @@ import InstagramIcon from "@mui/icons-material/Instagram";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import { useForm } from "react-hook-form";
 import React from "react";
-import ReactDOM from "react-dom";
 
 // COMPONENT FOR LOGIN AND EMAIL
 const InputDiv = ({ icon, type, placeholder, otherClass = "" }) => {
