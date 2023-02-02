@@ -29,7 +29,7 @@ function Nav() {
       <div class="flex flex-row w-1/6 text-white GFold:w-1/2">
         <a href="#">Time Dweller</a>
       </div>
-      <div class="flex flex-row justify-evenly w-4/6 px-20 GFold:hidden ">
+      <div class="flex flex-row justify-evenly w-4/6 px-20 GFold:hidden">
         <ItemNav href={"#Offers"} itemTitle={"Offers"} />
         <ItemNav itemTitle={"Buy"} />
         <ItemNav itemTitle={"Sell"} />

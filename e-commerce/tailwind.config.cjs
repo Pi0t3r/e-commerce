@@ -28,6 +28,13 @@ module.exports = {
       height: {
         90: "90vh",
       },
+      colors: {
+        "Main-text": "rgb(233,228,228)",
+        "paragraph": "#ADA9A9",
+        "form":"#FC7575",
+        "instagram":"linear-gradient(#FFDC80,#FCAF45,#F77737,#F56040,#FD1D1D,#E1306C,#C13584,#833AB4,#5B51D8,#405DE6)",
+        "facebook":"#3b5998 "
+      },
     },
   },
   plugins: [],

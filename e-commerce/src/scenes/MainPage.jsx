@@ -2,6 +2,7 @@ import Header from "../components/Header";
 import Offers from "../components/Offers";
 import Nav from "../components/Nav";
 import Buy from "../components/Buy";
+import Sidebar from "../components/Sidebar";
 
 function MainPage() {
   return (
@@ -11,6 +12,7 @@ function MainPage() {
         <Header />
         <Offers />
         <Buy />
+        <Sidebar />
       </div>
     </div>
   );
