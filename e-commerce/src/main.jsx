@@ -6,7 +6,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Login from "./scenes/login";
 import SignUp from "./scenes/Signup";
 import Forgot from "./scenes/forgot";
-
+import Man from "./scenes/Man";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -23,6 +23,10 @@ const router = createBrowserRouter([
   {
     path: "/forgot",
     element: <Forgot />,
+  },
+  {
+    path: "/Man",
+    element: <Man />,
   },
 ]);
 

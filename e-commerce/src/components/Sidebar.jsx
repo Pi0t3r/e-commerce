@@ -21,7 +21,7 @@ const ItemNav = ({ icon, title, href }) => {
 function Sidebar({ move, handleClick }) {
   return (
     <div
-      class={`fixed bg-mainColor w-3/5 h-full transition-all top-0 ${
+      class={`fixed bg-mainColor w-3/5 h-full ease-in duration-300 top-0 ${
         move ? "left-0" : "-left-3/4"
       }`}
     >
