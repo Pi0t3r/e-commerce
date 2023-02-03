@@ -7,6 +7,7 @@ import Login from "./scenes/login";
 import SignUp from "./scenes/Signup";
 import Forgot from "./scenes/forgot";
 import Man from "./scenes/Man";
+import Woman from "./scenes/Woman";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -27,6 +28,10 @@ const router = createBrowserRouter([
   {
     path: "/Man",
     element: <Man />,
+  },
+  {
+    path: "/Woman",
+    element: <Woman />,
   },
 ]);
 

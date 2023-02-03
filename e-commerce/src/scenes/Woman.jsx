@@ -1,21 +1,22 @@
+import WatchView from "../components/WatchView";
 import FavoriteIcon from "@mui/icons-material/Favorite";
 import LocalMallOutlinedIcon from "@mui/icons-material/LocalMallOutlined";
-import WatchView from "../components/WatchView";
-function Man() {
+
+function Woman() {
   return (
     <div>
       <WatchView
-        title="man"
+        title="woman"
         icon1={<FavoriteIcon />}
         icon2={<LocalMallOutlinedIcon />}
         image="url('./src/images/image1.jpg')"
-        price="5000"
-        name="Rolex"
-        model="Day-Date"
-        year="2020"
+        price="8000"
+        name="Oris"
+        model="Aquis Date"
+        year="2019"
       />
     </div>
   );
 }
 
-export default Man;
+export default Woman;
