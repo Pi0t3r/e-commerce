@@ -24,16 +24,20 @@ module.exports = {
           "url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTDWAQGyog52I6IwyEiCo2i1owmhffE2oJUpucq3swY30lwkMFNJDR_iK8cHVJZpwuMXso&usqp=CAU)",
         ItemHeader6:
           "url(https://zegarownia.pl/media/catalog/product/z/e/zegarek-meski-maserati-sfida-chronograph-r8871640001_1_1.jpg)",
+        Kitty:
+          "url('./src/images/kitty__sweet_kitty__by_oldskoolkidz_d3ioy5p-fullview.jpg')",
       },
       height: {
         90: "90vh",
       },
       colors: {
         "Main-text": "rgb(233,228,228)",
-        "paragraph": "#ADA9A9",
-        "form":"#FC7575",
-        "instagram":"linear-gradient(#FFDC80,#FCAF45,#F77737,#F56040,#FD1D1D,#E1306C,#C13584,#833AB4,#5B51D8,#405DE6)",
-        "facebook":"#3b5998 "
+        paragraph: "#ADA9A9",
+        form: "#FC7575",
+        instagram:
+          "linear-gradient(#FFDC80,#FCAF45,#F77737,#F56040,#FD1D1D,#E1306C,#C13584,#833AB4,#5B51D8,#405DE6)",
+        facebook: "#3b5998",
+        mainColor: "#3B47BA",
       },
     },
   },

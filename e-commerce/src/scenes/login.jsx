@@ -1,5 +1,3 @@
-import PersonIcon from "@mui/icons-material/Person";
-import LockIcon from "@mui/icons-material/Lock";
 import "../index.css";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import FacebookIcon from "@mui/icons-material/Facebook";
@@ -35,23 +33,29 @@ function Login() {
           </div>
           <div class="mt-6">
             <form class="flex flex-col">
-              <label class="text-form">Email</label>
+              <label for="email" class="text-form">
+                Email
+              </label>
               <input
+                id="email"
                 type="email"
                 placeholder="example@email.com"
                 class="bg-transparent outline-none text-paragraph"
               />
-              <hr class="bg-paragraph" />
-              <label class="text-form mt-6">Password</label>
+              <hr />
+              <label for="password" class="text-form mt-6">
+                Password
+              </label>
               <div class="flex flex-row justify-between">
                 <input
+                  id="password"
                   type="password"
                   placeholder="example@email.com"
                   class="bg-transparent outline-none text-paragraph"
                 />
                 <VisibilityIcon class="fill-paragraph text-sm w-8" />
               </div>
-              <hr class="bg-paragraph" />
+              <hr />
               <input
                 type="submit"
                 value="Sign in"
