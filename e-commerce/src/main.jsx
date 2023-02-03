@@ -8,6 +8,8 @@ import SignUp from "./scenes/Signup";
 import Forgot from "./scenes/forgot";
 import Man from "./scenes/Man";
 import Woman from "./scenes/Woman";
+import Settings from "./scenes/Settings";
+
 const router = createBrowserRouter([
   {
     path: "/",
@@ -32,6 +34,10 @@ const router = createBrowserRouter([
   {
     path: "/Woman",
     element: <Woman />,
+  },
+  {
+    path: "/Settings",
+    element: <Settings />,
   },
 ]);
 
