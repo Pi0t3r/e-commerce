@@ -39,7 +39,7 @@ function Sidebar({ move, handleClick }) {
         <ItemNav title="Woman" href="/Woman" icon={<WomanIcon />} />
         <ItemNav
           title="Favourites"
-          href="/Favoutires"
+          href="/Favourites"
           icon={<FavoriteIcon />}
         />
         <ItemNav title="Coupons" href="/Coupons" icon={<SellIcon />} />

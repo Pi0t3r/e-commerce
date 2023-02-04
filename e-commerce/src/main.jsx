@@ -12,6 +12,7 @@ import Settings from "./scenes/Settings";
 import Account from "./scenes/Account";
 import Coupons from "./scenes/Coupons";
 import Basket from "./scenes/Basket";
+import Favourites from "./scenes/Favourites";
 
 const router = createBrowserRouter([
   {
@@ -53,6 +54,10 @@ const router = createBrowserRouter([
   {
     path: "/Basket",
     element: <Basket />,
+  },
+  {
+    path: "/Favourites",
+    element: <Favourites />,
   },
 ]);
 
