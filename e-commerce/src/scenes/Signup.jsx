@@ -1,4 +1,4 @@
-export const LabelInput = ({ title, forId, type, placeholder, required=true, icon }) => {
+export const LabelInput = ({ title, forId, type, placeholder }) => {
   return (
     <div class="flex flex-col mt-4">
       <label for={forId} class="text-form">
@@ -65,7 +65,10 @@ function SignUp() {
           </div>
           <div class="mt-3">
             <p class="text-Main-text flex flex-row justify-between">
-              Have an Account? <a href="/login" class="text-form">Sign In</a>
+              Have an Account?{" "}
+              <a href="/login" class="text-form">
+                Sign In
+              </a>
             </p>
           </div>
         </div>
