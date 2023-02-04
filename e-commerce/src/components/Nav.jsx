@@ -41,7 +41,7 @@ function Nav() {
             </a>
           </li>
           <li>
-            <a href="/Cart">
+            <a href="/Basket">
               <LocalMallOutlinedIcon />
             </a>
           </li>

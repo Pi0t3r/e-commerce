@@ -29,7 +29,7 @@ const List = ({ icon, text, href }) => {
 function Settings() {
   return (
     <>
-      <CircleTop title={"Settings"} />
+      <CircleTop title={"Settings"} href="/"/>
       <div class="mt-[-420px] mx-5">
         <ul>
           <p class="uppercase text-paragraph font-medium my-2">General</p>

@@ -25,7 +25,7 @@ const Data = ({ icon, type, forID, placeholder }) => {
 function Account() {
   return (
     <>
-      <CircleTop title={"User Name"}></CircleTop>
+      <CircleTop title={"User Name"} href="/Settings"/>
       <div class="bg-Kitty bg-cover bg-center w-[100px] h-[100px] absolute top-[14%] left-1/2 rounded-full -translate-x-1/2 drop-shadow-[0_9px_18px_rgba(0,0,0,0.8)]" />
       <div class="absolute top-1/3 mx-5 w-5/6">
         <Data

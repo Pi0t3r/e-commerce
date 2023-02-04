@@ -11,6 +11,7 @@ import Woman from "./scenes/Woman";
 import Settings from "./scenes/Settings";
 import Account from "./scenes/Account";
 import Coupons from "./scenes/Coupons";
+import Basket from "./scenes/Basket";
 
 const router = createBrowserRouter([
   {
@@ -48,6 +49,10 @@ const router = createBrowserRouter([
   {
     path: "/Coupons",
     element: <Coupons />,
+  },
+  {
+    path: "/Basket",
+    element: <Basket />,
   },
 ]);
 
