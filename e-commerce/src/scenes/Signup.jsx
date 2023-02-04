@@ -1,4 +1,4 @@
-const LabelInput = ({ title, forId, type, placeholder }) => {
+export const LabelInput = ({ title, forId, type, placeholder, required=true, icon }) => {
   return (
     <div class="flex flex-col mt-4">
       <label for={forId} class="text-form">

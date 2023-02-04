@@ -9,7 +9,8 @@ import Forgot from "./scenes/forgot";
 import Man from "./scenes/Man";
 import Woman from "./scenes/Woman";
 import Settings from "./scenes/Settings";
-import Account from "./scenes/Account"
+import Account from "./scenes/Account";
+import Coupons from "./scenes/Coupons";
 
 const router = createBrowserRouter([
   {
@@ -43,6 +44,10 @@ const router = createBrowserRouter([
   {
     path: "/Account",
     element: <Account />,
+  },
+  {
+    path: "/Coupons",
+    element: <Coupons />,
   },
 ]);
 

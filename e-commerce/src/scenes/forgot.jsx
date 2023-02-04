@@ -1,31 +1,36 @@
 import KeyboardBackspaceIcon from "@mui/icons-material/KeyboardBackspace";
+import KeyIcon from "@mui/icons-material/Key";
+import { LabelInput } from "./Signup";
 function Forgot() {
   return (
     <div class="bg-BackgroundHeaderImage bg-cover bg-center w-screen h-screen">
-      <div class="absolute w-full h-full bg-zinc-900/70">
-        <div class="absolute top-1/2 left-1/2 flex flex-col translate-x-[-50%] translate-y-[-50%] w-1/3 h-[40%] items-center shadow-[10px_0px_136px_-15px_rgba(0,0,0,1)]">
-          <div class="text-left text-white w-full pt-2 pl-4 hover:text-slate-400 transition-all">
-            <a href="/login" class="flex flex-row items-center">
-              <KeyboardBackspaceIcon /> <span class="ml-2">Back</span>
-            </a>
+      <div class="absolute w-full h-full bg-black/70">
+        <div class="w-5/6 h-3/4 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+          <div class="bg-white w-16 h-16 rounded-full absolute left-1/2 -translate-x-1/2 top-0 -translate-y-1/2 flex items-center justify-center text-mainColor">
+            <KeyIcon sx={{ fontSize: 30, rotate: "45deg" }} />
           </div>
-          <div class="text-center text-white my-4 text-3xl">
-            <h1>Reset Password</h1>
-          </div>
-          <div class="text-white px-4 mx-auto">
-            <p>
-              Enter the email associated with your account and we'll send and
-              email with instructions to reset your password.
+          <div class="flex flex-col justify-center text-center mt-14">
+            <h3 class="text-Main-text font-medium text-3xl">
+              Forgot password?
+            </h3>
+            <p class="text-paragraph text-xs font-medium mt-3">
+              No worries, we'll send you reset instructions
             </p>
           </div>
-          <div class="flex flex-col text-left w-full px-4 text-white mt-6">
-            <label for="email">Email address</label>
-            <input type="email" name="email" class="rounded-md p-2"/>
-            <input
-              type="submit"
-              value="Send Instructions"
-              class="bg-blue-500 mt-10 p-2 rounded-md cursor-pointer hover:bg-blue-600 hover:scale-105 transition-all"
+          <div>
+            <LabelInput
+              title="Email"
+              forId="email"
+              type="email"
+              placeholder="Enter your email"
             />
+            <input type="submit"  value="Reset password" class="w-full bg-form mt-6 text-Main-text py-3 rounded-xl font-medium tracking-wide"/>
+          </div>
+          <div class="text-Main-text mt-7">
+            <a href="/Login" class="flex items-center justify-center">
+            <KeyboardBackspaceIcon />
+            <span class="ml-3 font-medium">Back to log in</span>
+            </a>
           </div>
         </div>
       </div>

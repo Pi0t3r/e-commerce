@@ -3,7 +3,7 @@ import InstagramIcon from "@mui/icons-material/Instagram";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import React from "react";
 import VisibilityIcon from "@mui/icons-material/Visibility";
-
+import { LabelInput } from "./Signup";
 const Button = ({ icon, background, title }) => {
   return (
     <button
@@ -33,16 +33,12 @@ function Login() {
           </div>
           <div class="mt-6">
             <form class="flex flex-col">
-              <label for="email" class="text-form">
-                Email
-              </label>
-              <input
-                id="email"
+              <LabelInput
+                title="Email"
+                forId="email"
                 type="email"
                 placeholder="example@email.com"
-                class="bg-transparent outline-none text-paragraph"
               />
-              <hr />
               <label for="password" class="text-form mt-6">
                 Password
               </label>
@@ -50,17 +46,18 @@ function Login() {
                 <input
                   id="password"
                   type="password"
-                  placeholder="example@email.com"
+                  placeholder="•••••••"
                   class="bg-transparent outline-none text-paragraph"
                 />
                 <VisibilityIcon class="fill-paragraph text-sm w-8" />
               </div>
               <hr />
-              <input
-                type="submit"
-                value="Sign in"
-                class="bg-form font-bold text-Main-text mt-6 px-2 py-3 rounded-lg"
-              />
+              <a
+                href="/"
+                class="bg-form font-bold text-Main-text mt-6 px-2 py-3 rounded-lg text-center"
+              >
+                <input type="submit" value="Sign in" />
+              </a>
             </form>
             <div class="mt-4">
               <p class="text-paragraph text-center">

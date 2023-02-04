@@ -36,10 +36,14 @@ function Nav() {
             </label>
           </li>
           <li>
-            <PersonOutlineOutlinedIcon />
+            <a href="/login">
+              <PersonOutlineOutlinedIcon />
+            </a>
           </li>
           <li>
-            <LocalMallOutlinedIcon />
+            <a href="/Cart">
+              <LocalMallOutlinedIcon />
+            </a>
           </li>
         </ul>
       </div>
