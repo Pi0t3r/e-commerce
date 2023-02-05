@@ -28,7 +28,7 @@ function Login() {
     setInputType(inputType === "password" ? "text" : "password");
   };
   const [email, setEmail] = useState("");
-  const [error, setError] = useState("");
+  const [errorEmail, setErrorEmail] = useState("");
   const validateEmail = (email) => {
     const re =
       /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
@@ -37,12 +37,37 @@ function Login() {
   const handleChange = (e) => {
     setEmail(e.target.value);
     if (!validateEmail(e.target.value)) {
-      setError("Niepoprawny email");
+      setErrorEmail("Invalid email");
     } else {
-      setError("");
+      setErrorEmail("");
     }
   };
 
+  const [password, setPassword] = useState("");
+  const [errorPassword, setErrorPassword] = useState("");
+  const handleChangePassowrd = (e) => {
+    setPassword(e.target.value);
+    if (password.length < 8) {
+      setErrorPassword("Invalid password");
+    } else {
+      setErrorPassword("");
+    }
+  };
+
+  function CheckForm(event) {
+    const password = document.getElementById("password").value;
+    const isPasswordValid = password.length >= 8;
+    const email = document.getElementById("email").value;
+    const emailRegex =
+      /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    const isValidEmail = emailRegex.test(email);
+    const btn = document.getElementById("btn");
+    if (isPasswordValid && isValidEmail) {
+      btn.href = "/Woman";
+    } else {
+      event.preventDefault();
+    }
+  }
   return (
     <div class="bg-BackgroundHeaderImage bg-cover bg-center w-screen h-screen">
       <div class="absolute w-full h-full bg-black/70 flex justify-center items-center">
@@ -62,25 +87,39 @@ function Login() {
                 value={email}
                 onChange={handleChange}
               />
-              {error && <p style={{ color: "red" }}>{error}</p>}
+              {errorEmail && (
+                <p class="text-red-600 absolute top-[40%] left-1/2 -translate-x-1/2">
+                  {errorEmail}
+                </p>
+              )}
               <label for="password" class="text-form mt-6">
                 Password
               </label>
-              <div class="flex flex-row justify-between">
+              <div class="flex flex-row justify-between relative">
                 <input
                   id="password"
                   type={inputType}
                   placeholder="•••••••"
                   class="bg-transparent outline-none text-paragraph"
+                  onChange={handleChangePassowrd}
                 />
                 <VisibilityIcon
                   class="fill-paragraph text-sm w-8"
                   onClick={toggleInputType}
                 />
+                {errorPassword && (
+                  <p class="text-red-600 absolute bottom-[-90%] left-1/2 -translate-x-1/2">
+                    {errorPassword}
+                  </p>
+                )}
               </div>
               <hr />
-              <button class="bg-form font-bold text-Main-text mt-6 px-2 py-3 rounded-lg text-center">
-                <a href="/">Sign in</a>
+              <button
+                id="btn"
+                class="bg-form font-bold text-Main-text mt-10 px-2 py-3 rounded-lg text-center"
+                onClick={CheckForm}
+              >
+                <a>Sign in</a>
               </button>
             </form>
             <div class="mt-4">

@@ -7,7 +7,7 @@ export const LabelInput = ({
   onChange = "",
 }) => {
   return (
-    <div class="flex flex-col mt-4">
+    <div class="flex flex-col mt-4 ">
       <label for={forId} class="text-form">
         {title}
       </label>
