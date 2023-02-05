@@ -1,4 +1,11 @@
-export const LabelInput = ({ title, forId, type, placeholder }) => {
+export const LabelInput = ({
+  title,
+  forId,
+  type,
+  placeholder,
+  value = "",
+  onChange = "",
+}) => {
   return (
     <div class="flex flex-col mt-4">
       <label for={forId} class="text-form">
@@ -8,6 +15,8 @@ export const LabelInput = ({ title, forId, type, placeholder }) => {
         class="bg-transparent outline-none text-paragraph"
         type={type}
         placeholder={placeholder}
+        value={value}
+        onChange={onChange}
       />
       <hr />
     </div>

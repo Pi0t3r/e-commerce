@@ -1,9 +1,10 @@
 import "../index.css";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import FacebookIcon from "@mui/icons-material/Facebook";
-import React from "react";
+import React, { useState } from "react";
 import VisibilityIcon from "@mui/icons-material/Visibility";
 import { LabelInput } from "./Signup";
+
 const Button = ({ icon, background, title }) => {
   return (
     <button
@@ -22,6 +23,26 @@ const Links = ({ title, color, href }) => {
 };
 // LOGIN COMPONENT THAT RETURNS JSX FOR THE LOGIN FORM
 function Login() {
+  const [inputType, setInputType] = useState("password");
+  const toggleInputType = () => {
+    setInputType(inputType === "password" ? "text" : "password");
+  };
+  const [email, setEmail] = useState("");
+  const [error, setError] = useState("");
+  const validateEmail = (email) => {
+    const re =
+      /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return re.test(String(email).toLowerCase());
+  };
+  const handleChange = (e) => {
+    setEmail(e.target.value);
+    if (!validateEmail(e.target.value)) {
+      setError("Niepoprawny email");
+    } else {
+      setError("");
+    }
+  };
+
   return (
     <div class="bg-BackgroundHeaderImage bg-cover bg-center w-screen h-screen">
       <div class="absolute w-full h-full bg-black/70 flex justify-center items-center">
@@ -37,22 +58,30 @@ function Login() {
                 title="Email"
                 forId="email"
                 type="email"
-                placeholder="example@email.com"
+                placeholder="example@gmail.com"
+                value={email}
+                onChange={handleChange}
               />
+              {error && <p style={{ color: "red" }}>{error}</p>}
               <label for="password" class="text-form mt-6">
                 Password
               </label>
               <div class="flex flex-row justify-between">
                 <input
                   id="password"
-                  type="password"
+                  type={inputType}
                   placeholder="•••••••"
                   class="bg-transparent outline-none text-paragraph"
                 />
-                <VisibilityIcon class="fill-paragraph text-sm w-8" />
+                <VisibilityIcon
+                  class="fill-paragraph text-sm w-8"
+                  onClick={toggleInputType}
+                />
               </div>
               <hr />
-              <button class="bg-form font-bold text-Main-text mt-6 px-2 py-3 rounded-lg text-center"><a href="/">Sign in</a></button>
+              <button class="bg-form font-bold text-Main-text mt-6 px-2 py-3 rounded-lg text-center">
+                <a href="/">Sign in</a>
+              </button>
             </form>
             <div class="mt-4">
               <p class="text-paragraph text-center">
