@@ -52,12 +52,7 @@ function Login() {
                 <VisibilityIcon class="fill-paragraph text-sm w-8" />
               </div>
               <hr />
-              <a
-                href="/"
-                class="bg-form font-bold text-Main-text mt-6 px-2 py-3 rounded-lg text-center"
-              >
-                <input type="submit" value="Sign in" />
-              </a>
+              <button class="bg-form font-bold text-Main-text mt-6 px-2 py-3 rounded-lg text-center"><a href="/">Sign in</a></button>
             </form>
             <div class="mt-4">
               <p class="text-paragraph text-center">

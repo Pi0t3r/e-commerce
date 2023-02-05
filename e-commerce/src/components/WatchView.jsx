@@ -1,6 +1,6 @@
 import Nav from "../components/Nav";
 import Sidebar from "../components/Sidebar";
-const ItemInCart = ({ bgimage, price, icon1, icon2, name, model, year }) => {
+export const Item = ({ bgimage, price, icon1, icon2, name, model, year }) => {
   return (
     <div class="mt-6">
       <div
@@ -50,7 +50,7 @@ function WatchView({ title, image, price, icon1, icon2, name, model, year }) {
               {title}
             </h3>
           </div>
-          <ItemInCart
+          <Item
             bgimage={image}
             price={price}
             icon1={icon1}
@@ -60,7 +60,7 @@ function WatchView({ title, image, price, icon1, icon2, name, model, year }) {
             year={year}
           />
 
-          <ItemInCart
+          <Item
             bgimage={image}
             price={price}
             icon1={icon1}

@@ -1,19 +1,40 @@
+import Nav from "../components/Nav";
+import Sidebar from "../components/Sidebar";
+import { Item } from "./Favourites";
 import FavoriteIcon from "@mui/icons-material/Favorite";
 import LocalMallOutlinedIcon from "@mui/icons-material/LocalMallOutlined";
-import WatchView from "../components/WatchView";
 function Man() {
   return (
-    <div>
-      <WatchView
-        title="man"
-        icon1={<FavoriteIcon />}
-        icon2={<LocalMallOutlinedIcon />}
-        image="url('./src/images/image1.jpg')"
-        price="5000"
-        name="Rolex"
-        model="Day-Date"
-        year="2020"
-      />
+    <div class="bg-ItemHeader3 bg-cover bg-center w-screen h-screen bg-fixed">
+      <Nav />
+      <Sidebar />
+      <div class="absolute w-full h-full bg-black/70">
+        <div class="w-full mt-20">
+          <h3 class="text-paragraph uppercase italic text-center text-3xl">
+            Man
+          </h3>
+        </div>
+        <div class="mt-10">
+          <Item
+            bgimage="Item"
+            price="2000"
+            icon1={<FavoriteIcon />}
+            icon2={<LocalMallOutlinedIcon />}
+            name="Rolex"
+            model="Day-Date"
+            year="2020"
+          />
+          <Item
+            bgimage="Item"
+            price="2000"
+            icon1={<FavoriteIcon />}
+            icon2={<LocalMallOutlinedIcon />}
+            name="Rolex"
+            model="Day-Date"
+            year="2020"
+          />
+        </div>
+      </div>
     </div>
   );
 }
