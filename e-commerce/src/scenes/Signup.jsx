@@ -5,10 +5,11 @@ export const LabelInput = ({
   placeholder,
   value = "",
   onChange = "",
+  className = "",
 }) => {
   return (
     <div class="flex flex-col mt-4 ">
-      <label for={forId} class="text-form">
+      <label for={forId} class="text-form" className={className}>
         {title}
       </label>
       <input

@@ -45,7 +45,7 @@ function Login() {
 
   const [password, setPassword] = useState("");
   const [errorPassword, setErrorPassword] = useState("");
-  const handleChangePassowrd = (e) => {
+  const handleChangePassword = (e) => {
     setPassword(e.target.value);
     if (password.length < 8) {
       setErrorPassword("Invalid password");
@@ -53,21 +53,13 @@ function Login() {
       setErrorPassword("");
     }
   };
-
-  function CheckForm(event) {
-    const password = document.getElementById("password").value;
-    const isPasswordValid = password.length >= 8;
-    const email = document.getElementById("email").value;
-    const emailRegex =
-      /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-    const isValidEmail = emailRegex.test(email);
-    const btn = document.getElementById("btn");
-    if (isPasswordValid && isValidEmail) {
-      btn.href = "/Woman";
+  const checkInputs = () => {
+    if (errorPassword === "" && errorEmail === "") {
+      window.location.href = "/";
     } else {
-      event.preventDefault();
+      alert("Something wrong");
     }
-  }
+  };
   return (
     <div class="bg-BackgroundHeaderImage bg-cover bg-center w-screen h-screen">
       <div class="absolute w-full h-full bg-black/70 flex justify-center items-center">
@@ -79,16 +71,19 @@ function Login() {
           </div>
           <div class="mt-6">
             <form class="flex flex-col">
-              <LabelInput
-                title="Email"
-                forId="email"
-                type="email"
-                placeholder="example@gmail.com"
-                value={email}
-                onChange={handleChange}
-              />
+              <div class="flex flex-col">
+                <label class="text-form">Email</label>
+                <input
+                  id="emailInput"
+                  type="email"
+                  placeholder="example@gmail.com"
+                  onChange={handleChange}
+                  class="bg-transparent outline-none text-paragraph"
+                />
+                <hr />
+              </div>
               {errorEmail && (
-                <p class="text-red-600 absolute top-[40%] left-1/2 -translate-x-1/2">
+                <p class="text-red-600 absolute top-[38%] left-1/2 -translate-x-1/2">
                   {errorEmail}
                 </p>
               )}
@@ -97,11 +92,11 @@ function Login() {
               </label>
               <div class="flex flex-row justify-between relative">
                 <input
-                  id="password"
+                  id="passwordInput"
                   type={inputType}
                   placeholder="•••••••"
                   class="bg-transparent outline-none text-paragraph"
-                  onChange={handleChangePassowrd}
+                  onChange={handleChangePassword}
                 />
                 <VisibilityIcon
                   class="fill-paragraph text-sm w-8"
@@ -114,13 +109,13 @@ function Login() {
                 )}
               </div>
               <hr />
-              <button
-                id="btn"
+              <a
+                id="buttonSend"
                 class="bg-form font-bold text-Main-text mt-10 px-2 py-3 rounded-lg text-center"
-                onClick={CheckForm}
+                onClick={checkInputs}
               >
-                <a>Sign in</a>
-              </button>
+                Sign in
+              </a>
             </form>
             <div class="mt-4">
               <p class="text-paragraph text-center">
