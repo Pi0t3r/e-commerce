@@ -3,7 +3,6 @@ import InstagramIcon from "@mui/icons-material/Instagram";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import React, { useState } from "react";
 import VisibilityIcon from "@mui/icons-material/Visibility";
-import { LabelInput } from "./Signup";
 
 const Button = ({ icon, background, title }) => {
   return (

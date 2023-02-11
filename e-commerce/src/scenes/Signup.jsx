@@ -1,22 +1,22 @@
+import { useState } from "react";
+
 export const LabelInput = ({
   title,
   forId,
   type,
   placeholder,
-  value = "",
   onChange = "",
-  className = "",
 }) => {
   return (
     <div class="flex flex-col mt-4 ">
-      <label for={forId} class="text-form" className={className}>
+      <label for={forId} class="text-form">
         {title}
       </label>
       <input
+        id={forId}
         class="bg-transparent outline-none text-paragraph"
         type={type}
         placeholder={placeholder}
-        value={value}
         onChange={onChange}
       />
       <hr />
@@ -25,6 +25,64 @@ export const LabelInput = ({
 };
 
 function SignUp() {
+  const [password, setPassword] = useState("");
+  const [errorPassword, setErrorPassword] = useState("");
+  const [errorSecondPassword, setErrorSecondPassword] = useState("");
+  const [secondPassword, setSecondPassword] = useState("");
+
+  const handleChangePassword = (e) => {
+    setPassword(e.target.value);
+    if (password.length < 8) {
+      setErrorPassword("Invalid Password");
+    } else {
+      setErrorPassword("");
+    }
+  };
+  const [email, setEmail] = useState("");
+  const [errorEmail, setErrorEmail] = useState("");
+  const validateEmail = (email) => {
+    const re =
+      /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return re.test(String(email).toLowerCase());
+  };
+  const handleChangeEmail = (e) => {
+    setEmail(e.target.value);
+    if (!validateEmail(e.target.value)) {
+      setErrorEmail("Invalid email");
+    } else {
+      setErrorEmail("");
+    }
+  };
+  const checkPassword = () => {
+    const passwordFirst = document.querySelector("#password").value;
+    const passwordSecond = document.querySelector("#confirmPass").value;
+    if (passwordFirst !== passwordSecond) {
+      alert("Passwords is different");
+      return false;
+    } else {
+      return true;
+    }
+  };
+  const checkInfo = () => {
+    const name = document.getElementById("name").value;
+    const surname = document.getElementById("surname").value;
+    const emailInput = document.getElementById("email").value;
+    if (name === "" || surname === "" || emailInput === "") {
+      alert("complete all information");
+      return false;
+    } else {
+      return true;
+    }
+  };
+  const checkAll = () => {
+    const isPasswordValid = checkPassword();
+    const isInfoValid = checkInfo();
+    if (isPasswordValid && isInfoValid && errorEmail === "") {
+      window.location.href = "/";
+    } else {
+      return;
+    }
+  };
   return (
     <div class="bg-BackgroundHeaderImage bg-cover bg-center shadow w-screen h-screen">
       <div class="absolute w-full h-full bg-black/70 flex justify-center items-center">
@@ -40,6 +98,7 @@ function SignUp() {
                 forId="name"
                 placeholder="name"
                 type="text"
+                pattern="[a-zA-Z]"
               />
               <LabelInput
                 title="Surname"
@@ -52,25 +111,42 @@ function SignUp() {
                 forId="email"
                 placeholder="Email"
                 type="email"
+                onChange={handleChangeEmail}
               />
+              {errorEmail && (
+                <p class="text-red-600 absolute top-1/2 mt-8 left-1/2 -translate-x-1/2">
+                  {errorEmail}
+                </p>
+              )}
               <LabelInput
                 title="Password"
                 forId="password"
                 placeholder="••••••••"
                 type="password"
+                onChange={handleChangePassword}
               />
+              {errorPassword && (
+                <p class="text-red-600 absolute top-[67%] left-1/2 -translate-x-1/2">
+                  {errorPassword}
+                </p>
+              )}
               <LabelInput
                 title="Confirm Password"
                 forId="confirmPass"
                 placeholder="••••••••"
                 type="password"
               />
-              <input
-                id="submit"
-                type="submit"
-                value="Sign up"
-                class="bg-form mt-6 rounded-lg text-Main-text p-2"
-              />
+              {errorSecondPassword && (
+                <p class="text-red-600 left-1/2 -translate-x-1/2 absolute top-[80%]">
+                  {errorSecondPassword}
+                </p>
+              )}
+              <a
+                class="bg-form mt-6 rounded-lg text-Main-text p-2 text-center"
+                onClick={checkAll}
+              >
+                Sign up
+              </a>
             </form>
           </div>
           <div class="mt-3">
