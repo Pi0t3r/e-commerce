@@ -1,6 +1,5 @@
 import Nav from "../components/Nav";
 import Sidebar from "../components/Sidebar";
-import { Item } from "./Favourites";
 import FavoriteIcon from "@mui/icons-material/Favorite";
 import LocalMallOutlinedIcon from "@mui/icons-material/LocalMallOutlined";
 import { Watches } from "../data/watches";
