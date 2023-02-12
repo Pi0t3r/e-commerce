@@ -6,37 +6,68 @@ import { Item } from "./Favourites";
 
 function Woman() {
   return (
-    <div class="bg-ItemHeader3 bg-cover bg-center w-screen h-screen bg-fixed">
-      <Nav />
-      <Sidebar />
-      <div class="absolute w-full h-full bg-black/70">
-        <div class="w-full mt-20">
-          <h3 class="text-paragraph uppercase italic text-center text-3xl">
-            Woman
-          </h3>
-        </div>
-        <div class="mt-10">
-          <Item
-            bgimage="Item"
-            price="2000"
-            icon1={<FavoriteIcon />}
-            icon2={<LocalMallOutlinedIcon />}
-            name="Rolex"
-            model="Day-Date"
-            year="2020"
-          />
-          <Item
-            bgimage="Item"
-            price="2000"
-            icon1={<FavoriteIcon />}
-            icon2={<LocalMallOutlinedIcon />}
-            name="Rolex"
-            model="Day-Date"
-            year="2020"
-          />
+    <div>
+    <Nav />
+    <Sidebar />
+    <div>
+      <div class="w-full mt-20">
+        <h3 class="text-paragraph uppercase italic text-center text-3xl">
+          Woman
+        </h3>
+      </div>
+      <div class="bg-ItemHeader6 bg-cover bg-center w-screen bg-fixed bg-fixed mt-[-40%]">
+        <div class="bg-black/70">
+          <div class="pt-52">
+            <Item
+              bgimage="Item"
+              price="2000"
+              icon1={<FavoriteIcon />}
+              icon2={<LocalMallOutlinedIcon />}
+              name="Rolex"
+              model="Day-Date"
+              year="2020"
+            />
+            <Item
+              bgimage="Item"
+              price="2000"
+              icon1={<FavoriteIcon />}
+              icon2={<LocalMallOutlinedIcon />}
+              name="Rolex"
+              model="Day-Date"
+              year="2020"
+            />
+            <Item
+              bgimage="Item"
+              price="2000"
+              icon1={<FavoriteIcon />}
+              icon2={<LocalMallOutlinedIcon />}
+              name="Rolex"
+              model="Day-Date"
+              year="2020"
+            />
+            <Item
+              bgimage="Item"
+              price="2000"
+              icon1={<FavoriteIcon />}
+              icon2={<LocalMallOutlinedIcon />}
+              name="Rolex"
+              model="Day-Date"
+              year="2020"
+            />
+            <Item
+              bgimage="Item"
+              price="2000"
+              icon1={<FavoriteIcon />}
+              icon2={<LocalMallOutlinedIcon />}
+              name="Rolex"
+              model="Day-Date"
+              year="2020"
+            />
+          </div>
         </div>
       </div>
     </div>
+  </div>
   );
 }
 
