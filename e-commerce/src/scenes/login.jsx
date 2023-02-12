@@ -37,8 +37,10 @@ function Login() {
     setEmail(e.target.value);
     if (!validateEmail(e.target.value)) {
       setErrorEmail("Invalid email");
+      return false;
     } else {
       setErrorEmail("");
+      return true;
     }
   };
 
@@ -48,30 +50,42 @@ function Login() {
     setPassword(e.target.value);
     if (password.length < 8) {
       setErrorPassword("Invalid password");
+      return false;
     } else {
       setErrorPassword("");
+      return true;
     }
   };
-  const checkInputs = () => {
-    if (errorPassword === "" && errorEmail === "") {
-      window.location.href = "/";
+  const CheckForm = () => {
+    const email = document.getElementById("emailInput");
+    const password = document.getElementById("passwordInput");
+    if (
+      errorPassword === "Invalid password" ||
+      errorEmail === "Invalid email" ||
+      email.value === "" ||
+      password.value === ""
+    ) {
+      alert("something wrong");
     } else {
-      alert("Something wrong");
+      window.location.href = "/";
     }
   };
+
   return (
     <div class="bg-BackgroundHeaderImage bg-cover bg-center w-screen h-screen">
       <div class="absolute w-full h-full bg-black/70 flex justify-center items-center">
         <div class="w-4/5 mt-[-13%]">
           <div class="text-center">
-            <h4 class="text-Main-text text-2xl font-bold">Company name</h4>
+            <h4 class="text-Main-text text-2xl font-bold">TimeKeepers</h4>
             <p class="text-Main-text text-xl mt-6">Sign in</p>
             <p class="text-paragraph mt-4">Hi there! Nice to see you again.</p>
           </div>
           <div class="mt-6">
             <form class="flex flex-col">
               <div class="flex flex-col">
-                <label class="text-form">Email</label>
+                <label for="emailInput" class="text-form">
+                  Email
+                </label>
                 <input
                   id="emailInput"
                   type="email"
@@ -86,7 +100,7 @@ function Login() {
                   {errorEmail}
                 </p>
               )}
-              <label for="password" class="text-form mt-6">
+              <label for="passwordInput" class="text-form mt-6">
                 Password
               </label>
               <div class="flex flex-row justify-between relative">
@@ -111,7 +125,7 @@ function Login() {
               <a
                 id="buttonSend"
                 class="bg-form font-bold text-Main-text mt-10 px-2 py-3 rounded-lg text-center"
-                onClick={checkInputs}
+                onClick={CheckForm}
               >
                 Sign in
               </a>

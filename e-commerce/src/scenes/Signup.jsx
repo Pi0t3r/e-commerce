@@ -88,7 +88,7 @@ function SignUp() {
       <div class="absolute w-full h-full bg-black/70 flex justify-center items-center">
         <div class="w-4/5 h-[90%]">
           <div class="text-center text-white">
-            <h4 class="text-Main-text text-2xl font-bold">Company Name</h4>
+            <h4 class="text-Main-text text-2xl font-bold">TimeKeepers</h4>
             <p class="text-Main-text text-xl mt-6">Sign Up</p>
           </div>
           <div class="mt-2">
