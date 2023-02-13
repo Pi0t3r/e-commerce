@@ -7,7 +7,7 @@ import { Watches } from "../data/watches";
 const FilterWatchFav = () => {
   const FilterWatch = Watches.filter((watch) => watch.isFavourites === true);
   return (
-    <div>
+    <div class="bg-transparent">
       {FilterWatch.map((watch) => (
         <div class="mt-2 bg-transparent">
           <img src={watch.image} class="rounded-xl mx-auto" />
@@ -36,14 +36,6 @@ const FilterWatchFav = () => {
                   <span class="text-paragraph italic ml-3">{watch.Series}</span>
                 </p>
               </li>
-              <li>
-                <p>
-                  Year:{" "}
-                  <span class="text-paragraph italic ml-3">
-                    Approx. {watch.Year}
-                  </span>
-                </p>
-              </li>
             </ul>
           </div>
           <hr class="mx-6 mt-3" />
@@ -59,15 +51,15 @@ function Favourites() {
       <Nav />
       <Sidebar />
       <div>
-        <div class="w-full mt-20">
+        <div class="mt-20">
           <h3 class="text-paragraph uppercase italic text-center text-3xl">
             Favourites
           </h3>
         </div>
-        <div class="bg-ItemHeader6 bg-cover bg-center w-screen h-full bg-fixed bg-fixed mt-[-40%]">
+        <div class="bg-ItemHeader6 bg-cover bg-center w-screen bg-fixed bg-fixed mt-[-40%]">
           <div class="bg-black/70">
             <div class="pt-40">
-              <FilterWatchFav />
+                <FilterWatchFav />
             </div>
           </div>
         </div>

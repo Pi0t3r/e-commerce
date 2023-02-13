@@ -9,7 +9,7 @@ const FilterWatchMan = () => {
     <div>
       {filteredWatches.map((watch) => (
         <div class="mt-2 bg-transparent">
-          <img src={watch.image} class="rounded-xl mx-auto" />
+          <img src={watch.image} class="rounded-xl mx-auto w-9/12" />
           <div class="text-white flex flex-row justify-between mx-6 mt-4">
             <h4 class="text-3xl">${watch.Price}</h4>
             <ul class="flex flex-row w-1/4 justify-between items-center">
@@ -33,14 +33,6 @@ const FilterWatchMan = () => {
                 <p>
                   Model:{" "}
                   <span class="text-paragraph italic ml-3">{watch.Series}</span>
-                </p>
-              </li>
-              <li>
-                <p>
-                  Year:{" "}
-                  <span class="text-paragraph italic ml-3">
-                    Approx. {watch.Year}
-                  </span>
                 </p>
               </li>
             </ul>
