@@ -7,10 +7,15 @@ import SellIcon from "@mui/icons-material/Sell";
 import SettingsIcon from "@mui/icons-material/Settings";
 
 const ItemNav = ({ icon, title, href }) => {
+  const isActive = window.location.pathname === href;
   return (
-    <div class="w-full h-[50px] flex">
-      <a href={href} class="flex flex-row items-center">
-        <p class="ml-3 text-Main-text text-lg">
+    <div class={`w-full h-[50px] flex items-center flex-row ${isActive ? "bg-gray-200" : ""} hover:bg-gray-700 transition-colors`}>
+      <a href={href} class="flex flex-row items-center ml-2 pt-6">
+        <p
+          class={`w-full h-[50px] flex ${
+            isActive ? "text-mainColor" : "text-Main-text"
+          }`}
+        >
           {icon} <span class="ml-10">{title}</span>
         </p>
       </a>
@@ -30,7 +35,7 @@ function Sidebar({ move, handleClick }) {
       </div>
       <div class="flex flex-col items-center">
         <div class="w-24 h-24 bg-Kitty bg-cover bg-center rounded-full mx-auto" />
-        <p class="text-Main-text text-xl my-2">User Name</p>
+        <p class="text-Main-text text-xl my-2 font-medium">User Name</p>
         <p class="text-paragraph">User Email</p>
       </div>
       <div class="flex flex-col mt-2">
