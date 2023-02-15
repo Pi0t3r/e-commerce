@@ -3,8 +3,13 @@ import Sidebar from "../components/Sidebar";
 import FavoriteIcon from "@mui/icons-material/Favorite";
 import LocalMallOutlinedIcon from "@mui/icons-material/LocalMallOutlined";
 import { Watches } from "../data/watches";
+import { useState } from "react";
 const FilterWatchMan = () => {
   const filteredWatches = Watches.filter((watch) => watch.gender === "man");
+  const [addToFav, setAddToFav] = useState(false);
+  const handleClick = () => {
+    setAddToFav(!addToFav);
+  };
   return (
     <div>
       {filteredWatches.map((watch) => (
@@ -13,7 +18,10 @@ const FilterWatchMan = () => {
           <div class="text-white flex flex-row justify-between mx-6 mt-4">
             <h4 class="text-3xl">${watch.Price}</h4>
             <ul class="flex flex-row w-1/4 justify-between items-center">
-              <li>
+              <li
+                onClick={handleClick}
+                class={`${addToFav ? "text-red-600" : ""}`}
+              >
                 <FavoriteIcon />
               </li>
               <li>
