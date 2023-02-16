@@ -3,14 +3,27 @@ import Sidebar from "../components/Sidebar";
 import FavoriteIcon from "@mui/icons-material/Favorite";
 import LocalMallOutlinedIcon from "@mui/icons-material/LocalMallOutlined";
 import { Watches } from "../data/watches";
-import { useState } from "react";
+import { useReducer, useState } from "react";
 const FilterWatchMan = () => {
   const filteredWatches = Watches.filter((watch) => watch.gender === "man");
-  const [color, setColor] = useState("");
-  const handleChangeClick = () => {
-    setColor(!color);
+  const [favoriteIds, dispatch] = useReducer((state, action) => {
+    switch (action.type) {
+      case "add":
+        return [...state, action.id];
+      case "remove":
+        return state.filter((id) => id !== action.id);
+      default:
+        return state;
+    }
+  }, []);
+  const isFavorite = (id) => favoriteIds.includes(id);
+  const toggleFavorite = (id) => {
+    if (isFavorite(id)) {
+      dispatch({ type: "remove", id });
+    } else {
+      dispatch({ type: "add", id });
+    }
   };
-
   return (
     <div>
       {filteredWatches.map((watch) => (
@@ -20,8 +33,8 @@ const FilterWatchMan = () => {
             <h4 class="text-3xl">${watch.Price}</h4>
             <ul class="flex flex-row w-1/4 justify-between items-center">
               <li
-                onClick={handleChangeClick}
-                class={`${color ? "text-red-600" : ""}`}
+                onClick={() => toggleFavorite(watch.id)}
+                class={`${isFavorite(watch.id) ? "text-red-600" : "action"}`}
               >
                 <FavoriteIcon />
               </li>
