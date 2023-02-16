@@ -20,8 +20,8 @@ function Nav() {
 
   return (
     <div
-      class={`z-10 fixed top-0 w-full h-2 flex flex-row text-slate-500 justify-between items-center p-8 mb-10 transition-all ${
-        scroll > 150 ? "bg-mainColor" : "text-slate-500"
+      class={`z-10 fixed top-0 w-full h-2 flex flex-row text-slate-500 justify-between items-center p-8 mb-10 transition-colors ${
+        scroll > 10 ? "bg-mainColor" : "text-slate-500"
       }`}
     >
       <div class="text-white w-1/2">
