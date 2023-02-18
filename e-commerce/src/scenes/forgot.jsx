@@ -49,13 +49,16 @@ function Forgot() {
             <input
               type="submit"
               value="Reset password"
-              class="w-full bg-form mt-6 text-Main-text py-3 rounded-xl font-medium tracking-wide"
+              class="w-full bg-form mt-6 text-Main-text py-3 rounded-xl font-medium tracking-wide cursor-pointer transition-all hover:bg-red-500 hover:scale-105"
             />
           </div>
           <div class="text-Main-text mt-7">
-            <a href="/Login" class="flex items-center justify-center">
+            <a
+              href="/Login"
+              class="flex items-center justify-center cursor-pointer hover:text-neutral-500 transition-colors"
+            >
               <KeyboardBackspaceIcon />
-              <span class="ml-3 font-medium">Back to log in</span>
+              <span class="ml-3 font-medium ">Back to log in</span>
             </a>
           </div>
         </div>

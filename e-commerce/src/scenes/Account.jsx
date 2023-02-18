@@ -26,7 +26,7 @@ function Account() {
   return (
     <>
       <CircleTop title={"User Name"} href="/Settings"/>
-      <div class="bg-Kitty bg-cover bg-center w-[100px] h-[100px] absolute top-[14%] left-1/2 rounded-full -translate-x-1/2 drop-shadow-[0_9px_18px_rgba(0,0,0,0.8)]" />
+      <div class="bg-Kitty bg-cover bg-center w-[100px] h-[100px] absolute top-[9%] left-1/2 rounded-full -translate-x-1/2 drop-shadow-[0_9px_18px_rgba(0,0,0,0.8)]" />
       <div class="absolute top-1/3 mx-5 w-5/6">
         <Data
           icon={<PersonOutlinedIcon />}
@@ -64,7 +64,7 @@ function Account() {
           forID="password"
           placeholder="•••••••"
         />
-        <button class="bg-mainColor text-Main-text py-4 px-7 w-5/6 mx-auto block mt-4 rounded-3xl font-medium tracking-wide">Edit Profile</button>
+        <button class="bg-mainColor text-Main-text py-4 px-7 w-5/6 mx-auto block mt-4 rounded-3xl font-medium tracking-wide cursor-pointer hover:bg-indigo-500 transition-colors hover:text-white">Edit Profile</button>
       </div>
     </>
   );

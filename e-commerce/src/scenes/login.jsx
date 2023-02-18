@@ -4,18 +4,21 @@ import FacebookIcon from "@mui/icons-material/Facebook";
 import React, { useState } from "react";
 import VisibilityIcon from "@mui/icons-material/Visibility";
 
-const Button = ({ icon, background, title }) => {
+const Button = ({ icon, background, title, color }) => {
   return (
     <button
-      class={`${background} text-Main-text w-[47%] p-2 rounded-md my-4 flex flex-row items-center `}
+      class={`${background} text-Main-text w-[47%] p-2 rounded-md my-4 flex flex-row items-center Gfold:w-[49%] justify-center cursor-pointer hover:scale-105 transition-all`}
     >
       {icon} <span class="ml-2">{title}</span>
     </button>
   );
 };
-const Links = ({ title, color, href }) => {
+const Links = ({ title, color, href, hover }) => {
   return (
-    <a href={href} class={`text-${color}`}>
+    <a
+      href={href}
+      class={`text-${color} hover:text-${hover} transition-colors cursor-pointer`}
+    >
       {title}
     </a>
   );
@@ -112,7 +115,7 @@ function Login() {
                   onChange={handleChangePassword}
                 />
                 <VisibilityIcon
-                  class="fill-paragraph text-sm w-8"
+                  class="fill-paragraph text-sm cursor-pointer w-8 hover:fill-neutral-500 transition-colors"
                   onClick={toggleInputType}
                 />
                 {errorPassword && (
@@ -124,7 +127,7 @@ function Login() {
               <hr />
               <a
                 id="buttonSend"
-                class="bg-form font-bold text-Main-text mt-10 px-2 py-3 rounded-lg text-center"
+                class="bg-form font-bold text-Main-text mt-10 px-2 py-3 rounded-lg text-center cursor-pointer hover:bg-red-500 transition-all hover:scale-105"
                 onClick={CheckForm}
               >
                 Sign in
@@ -152,8 +155,14 @@ function Login() {
                 title="Forgot password?"
                 color="paragraph"
                 href="/forgot"
+                hover={"neutral-500"}
               />
-              <Links title="Sign Up" color="form" href="/Signup" />
+              <Links
+                title="Sign Up"
+                color="form"
+                href="/Signup"
+                hover={"red-900"}
+              />
             </div>
           </div>
         </div>

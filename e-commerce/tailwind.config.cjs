@@ -4,7 +4,7 @@ module.exports = {
   theme: {
     screens: {
       iphoneSe: "320px",
-      GFold: "280px",
+      Gfold: "280px",
     },
     extend: {
       backgroundImage: {

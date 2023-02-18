@@ -5,7 +5,7 @@ function CircleTop({ title, href }) {
     <div class="relative overflow-hidden w-screen h-screen">
       <div class="bg-mainColor w-[491px] h-64 top-0 left-1/2 transform translate-y-[-50%] translate-x-[-50%] rounded-full absolute rounded-[50%]">
         <div class="absolute bottom-[85px] left-[100px] ">
-          <a class="text-Main-text text-3xl" href={href}>
+          <a class="text-Main-text text-3xl cursor-pointer hover:text-neutral-500 transition-colors" href={href}>
             <KeyboardBackspaceIcon />
           </a>
         </div>

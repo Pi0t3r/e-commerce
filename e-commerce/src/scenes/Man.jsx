@@ -34,11 +34,11 @@ const FilterWatchMan = () => {
             <ul class="flex flex-row w-1/4 justify-between items-center">
               <li
                 onClick={() => toggleFavorite(watch.id)}
-                class={`${isFavorite(watch.id) ? "text-red-600" : "action"}`}
+                class={`${isFavorite(watch.id) ? "text-red-600" : "action"} hover:scale-110 transition-all cursor-pointer`}
               >
                 <FavoriteIcon />
               </li>
-              <li>
+              <li class="hover:scale-110 transition-all cursor-pointer">
                 <LocalMallOutlinedIcon />
               </li>
             </ul>

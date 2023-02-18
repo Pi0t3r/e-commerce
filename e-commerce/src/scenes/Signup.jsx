@@ -114,7 +114,7 @@ function SignUp() {
                 onChange={handleChangeEmail}
               />
               {errorEmail && (
-                <p class="text-red-600 absolute top-1/2 mt-8 left-1/2 -translate-x-1/2">
+                <p class="text-red-600 absolute top-[33%] mt-8 left-1/2 -translate-x-1/2">
                   {errorEmail}
                 </p>
               )}
@@ -126,7 +126,7 @@ function SignUp() {
                 onChange={handleChangePassword}
               />
               {errorPassword && (
-                <p class="text-red-600 absolute top-[67%] left-1/2 -translate-x-1/2">
+                <p class="text-red-600 absolute top-[43.5%] left-1/2 -translate-x-1/2">
                   {errorPassword}
                 </p>
               )}
@@ -142,7 +142,7 @@ function SignUp() {
                 </p>
               )}
               <a
-                class="bg-form mt-6 rounded-lg text-Main-text p-2 text-center"
+                class="bg-form mt-6 rounded-lg text-Main-text p-2 text-center cursor-pointer transition-all hover:bg-red-500 hover:scale-105"
                 onClick={checkAll}
               >
                 Sign up
@@ -152,7 +152,7 @@ function SignUp() {
           <div class="mt-3">
             <p class="text-Main-text flex flex-row justify-between">
               Have an Account?{" "}
-              <a href="/login" class="text-form">
+              <a href="/login" class="text-form cursor-pointer hover:text-red-700 transition-colors">
                 Sign In
               </a>
             </p>

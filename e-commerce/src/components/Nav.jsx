@@ -17,14 +17,22 @@ function Nav() {
       setScroll(window.scrollY);
     });
   }, []);
-
+  const LinksNav = ({ href, icon }) => {
+    return (
+      <>
+        <li class="cursor-pointer hover:text-neutral-100 transition-colors">
+          <a href={href}>{icon}</a>
+        </li>
+      </>
+    );
+  };
   return (
     <div
       class={`z-10 fixed top-0 w-full h-2 flex flex-row text-slate-500 justify-between items-center p-8 mb-10 transition-colors ${
         scroll > 10 ? "bg-mainColor" : "text-slate-500"
       }`}
     >
-      <div class="text-white w-1/2">
+      <div class="text-white w-1/2 cursor-pointer hover:text-neutral-500 transition-colors">
         <MenuIcon onClick={handleClick} />
       </div>
       <div class="w-1/2">
@@ -35,16 +43,8 @@ function Nav() {
               <span class="slider round"></span>
             </label>
           </li>
-          <li>
-            <a href="/login">
-              <PersonOutlineOutlinedIcon />
-            </a>
-          </li>
-          <li>
-            <a href="/Basket">
-              <LocalMallOutlinedIcon />
-            </a>
-          </li>
+          <LinksNav href="/login" icon={<PersonOutlineOutlinedIcon />} />
+          <LinksNav href="/Basket" icon={<LocalMallOutlinedIcon />} />
         </ul>
       </div>
       <div>

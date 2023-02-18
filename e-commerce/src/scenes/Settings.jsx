@@ -10,7 +10,7 @@ import CircleTop from "../components/CircleTop";
 
 const List = ({ icon, text, href }) => {
   return (
-    <li class="w-full leading-[2.7rem]">
+    <li class="w-full leading-[2.7rem] cursor-pointer hover:bg-neutral-300 transition-colors">
       <a
         href={href}
         class="w-full flex flex-row justify-between items-center relative z-10"
@@ -30,7 +30,7 @@ function Settings() {
   return (
     <>
       <CircleTop title={"Settings"} href="/"/>
-      <div class="mt-[-420px] mx-5">
+      <div class="mx-5 absolute top-1/4 inset-x-0">
         <ul>
           <p class="uppercase text-paragraph font-medium my-2">General</p>
           <List icon={<PersonOutlinedIcon />} text="Account" href="/Account" />

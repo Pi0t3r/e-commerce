@@ -14,10 +14,10 @@ const FilterWatchFav = () => {
           <div class="text-white flex flex-row justify-between mx-6 mt-4">
             <h4 class="text-3xl">${watch.Price}</h4>
             <ul class="flex flex-row w-1/4 justify-between items-center">
-              <li>
+              <li class="hover:scale-110 transition-all cursor-pointer">
                 <FavoriteIcon />
               </li>
-              <li>
+              <li class="hover:scale-110 transition-all cursor-pointer">
                 <LocalMallOutlinedIcon />
               </li>
             </ul>
@@ -59,7 +59,7 @@ function Favourites() {
         <div class="bg-ItemHeader6 bg-cover bg-center w-screen bg-fixed bg-fixed mt-[-40%]">
           <div class="bg-black/70">
             <div class="pt-40">
-                <FilterWatchFav />
+              <FilterWatchFav />
             </div>
           </div>
         </div>

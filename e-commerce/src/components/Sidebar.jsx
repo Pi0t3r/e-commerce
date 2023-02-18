@@ -9,7 +9,11 @@ import SettingsIcon from "@mui/icons-material/Settings";
 const ItemNav = ({ icon, title, href }) => {
   const isActive = window.location.pathname === href;
   return (
-    <div class={`w-full h-[50px] flex items-center flex-row ${isActive ? "bg-gray-200" : ""} hover:bg-gray-700 transition-colors`}>
+    <div
+      class={`w-full h-[50px] flex items-center flex-row ${
+        isActive ? "bg-gray-200" : ""
+      } hover:bg-indigo-500 transition-colors cursor-pointer`}
+    >
       <a href={href} class="flex flex-row items-center ml-2 pt-6">
         <p
           class={`w-full h-[50px] flex ${
@@ -30,7 +34,7 @@ function Sidebar({ move, handleClick }) {
         move ? "left-0" : "-left-3/4"
       }`}
     >
-      <div class="p-2 text-white">
+      <div class="p-2 text-white cursor-pointer hover:text-neutral-400 transition-colors">
         <CloseIcon onClick={handleClick} />
       </div>
       <div class="flex flex-col items-center">

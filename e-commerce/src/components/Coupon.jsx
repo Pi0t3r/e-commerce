@@ -22,7 +22,7 @@ function Coupon({ code, procent, day, month, year }) {
           <p class="text-Main-text uppercase text-[8px] text-center mt-3 font-light flex flex-row items-center justify-center">
             Code:
             <span class="font-medium ml-5 text-sm">{code}</span>
-            <span class="ml-4">
+            <span class="ml-4 cursor-pointer hover:text-neutral-400 transition-colors">
               <ContentCopyIcon sx={{ fontSize: 15 }} />
             </span>
           </p>
