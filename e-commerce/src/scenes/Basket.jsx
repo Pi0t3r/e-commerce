@@ -1,10 +1,10 @@
-import CircleTop from "../components/CircleTop";
+
 import ItemCart from "../components/ItemCart";
 
 function Basket() {
   return (
     <div class="relative">
-      <CircleTop title="Basket Items" href="/" />
+   
       <div class="w-full h-40 absolute top-40">
         <ItemCart name="Watch Name" money="2000" code="123123" />
         <ItemCart name="Watch Name" money="2000" code="123123" />

@@ -76,7 +76,7 @@ function Man() {
             Man
           </h3>
         </div>
-        <div class="bg-ItemHeader6 bg-cover bg-center w-screen bg-fixed bg-fixed mt-[-40%]">
+        <div class="bg-ItemHeader6 bg-cover bg-center w-screen bg-fixed mt-[-40%]">
           <div class="bg-black/70">
             <div class="pt-40">
               <p class="text-paragraph px-2 text-center mb-10">

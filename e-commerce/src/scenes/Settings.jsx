@@ -6,7 +6,7 @@ import LogoutOutlinedIcon from "@mui/icons-material/LogoutOutlined";
 import DeleteOutlinedIcon from "@mui/icons-material/DeleteOutlined";
 import ErrorOutlineOutlinedIcon from "@mui/icons-material/ErrorOutlineOutlined";
 import SendOutlinedIcon from "@mui/icons-material/SendOutlined";
-import CircleTop from "../components/CircleTop";
+
 
 const List = ({ icon, text, href }) => {
   return (
@@ -29,7 +29,6 @@ const List = ({ icon, text, href }) => {
 function Settings() {
   return (
     <>
-      <CircleTop title={"Settings"} href="/"/>
       <div class="mx-5 absolute top-1/4 inset-x-0">
         <ul>
           <p class="uppercase text-paragraph font-medium my-2">General</p>
