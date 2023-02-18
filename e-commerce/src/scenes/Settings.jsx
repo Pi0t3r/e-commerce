@@ -6,14 +6,12 @@ import LogoutOutlinedIcon from "@mui/icons-material/LogoutOutlined";
 import DeleteOutlinedIcon from "@mui/icons-material/DeleteOutlined";
 import ErrorOutlineOutlinedIcon from "@mui/icons-material/ErrorOutlineOutlined";
 import SendOutlinedIcon from "@mui/icons-material/SendOutlined";
-
-
 const List = ({ icon, text, href }) => {
   return (
-    <li class="w-full leading-[2.7rem] cursor-pointer hover:bg-neutral-300 transition-colors">
+    <li class="w-full leading-[2.7rem] cursor-pointer h-20">
       <a
         href={href}
-        class="w-full flex flex-row justify-between items-center relative z-10"
+        class="w-full flex flex-row justify-between items-center relative z-10 text-paragraph"
       >
         <span class="w-1/5 text-center text-mainColor">{icon}</span>{" "}
         <span class="w-2/3">{text}</span>
@@ -28,34 +26,48 @@ const List = ({ icon, text, href }) => {
 
 function Settings() {
   return (
-    <>
-      <div class="mx-5 absolute top-1/4 inset-x-0">
-        <ul>
-          <p class="uppercase text-paragraph font-medium my-2">General</p>
-          <List icon={<PersonOutlinedIcon />} text="Account" href="/Account" />
-          <List
-            icon={<NotificationsOutlinedIcon />}
-            text="Notifications"
-            href="/Notifications"
-          />
-          <List icon={<LogoutOutlinedIcon />} text="Logout" href="/login" />
-          <List icon={<DeleteOutlinedIcon />} text="Delete" href="/Account" />
-        </ul>
-        <ul>
-          <p class="uppercase text-paragraph font-medium my-2">Feedback</p>
-          <List
-            icon={<ErrorOutlineOutlinedIcon />}
-            text="Report a bug"
-            href="/Report"
-          />
-          <List
-            icon={<SendOutlinedIcon />}
-            text="Send feedback"
-            href="/Feedback"
-          />
-        </ul>
+    <div class="bg-ItemHeader2 bg-cover bg-center w-screen h-screen bg-fixed">
+      <div class="bg-black/90 absolute inset-0">
+        <div class="absolute top-0 text-Main-text p-2">
+          <a href="/" class="hover:text-neutral-500 transition-colors pt-2">
+            <KeyboardBackspaceIcon />
+          </a>
+        </div>
+        <div class="text-paragraph text-center italic uppercase mt-20 text-4xl">
+          <h3>Settings</h3>
+        </div>
+        <div class="mx-5 mt-24">
+          <ul>
+            <p class="uppercase text-paragraph font-medium my-2">General</p>
+            <List
+              icon={<PersonOutlinedIcon />}
+              text="Account"
+              href="/Account"
+            />
+            <List
+              icon={<NotificationsOutlinedIcon />}
+              text="Notifications"
+              href="/Notifications"
+            />
+            <List icon={<LogoutOutlinedIcon />} text="Logout" href="/login" />
+            <List icon={<DeleteOutlinedIcon />} text="Delete" href="/Account" />
+          </ul>
+          <ul>
+            <p class="uppercase text-paragraph font-medium my-2">Feedback</p>
+            <List
+              icon={<ErrorOutlineOutlinedIcon />}
+              text="Report a bug"
+              href="/Report"
+            />
+            <List
+              icon={<SendOutlinedIcon />}
+              text="Send feedback"
+              href="/Feedback"
+            />
+          </ul>
+        </div>
       </div>
-    </>
+    </div>
   );
 }
 
