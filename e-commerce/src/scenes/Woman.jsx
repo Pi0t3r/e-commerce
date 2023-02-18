@@ -3,8 +3,27 @@ import LocalMallOutlinedIcon from "@mui/icons-material/LocalMallOutlined";
 import Nav from "../components/Nav";
 import Sidebar from "../components/Sidebar";
 import { Watches } from "../data/watches";
+import { useReducer } from "react";
 const FilterWatchWoman = () => {
   const FilterWatches = Watches.filter((watch) => watch.gender === "woman");
+  const [favoriteIds, dispatch] = useReducer((state, action) => {
+    switch (action.type) {
+      case "add":
+        return [...state, action.id];
+      case "remove":
+        return state.filter((id) => id !== action.id);
+      default:
+        return state;
+    }
+  }, []);
+  const isFavorite = (id) => favoriteIds.includes(id);
+  const toggleFavorite = (id) => {
+    if (isFavorite(id)) {
+      dispatch({ type: "remove", id });
+    } else {
+      dispatch({ type: "add", id });
+    }
+  };
   return (
     <div>
       {FilterWatches.map((watch) => (
@@ -14,7 +33,10 @@ const FilterWatchWoman = () => {
             <div class="text-white flex flex-row justify-between mx-6 mt-4">
               <h4 class="text-3xl">${watch.Price}</h4>
               <ul class="flex flex-row w-1/4 justify-between items-center">
-                <li>
+                <li
+                  onClick={() => toggleFavorite(watch.id)}
+                  class={`${isFavorite(watch.id) ? "text-red-600" : "action"}`}
+                >
                   <FavoriteIcon />
                 </li>
                 <li>

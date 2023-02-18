@@ -3,7 +3,7 @@ import Sidebar from "../components/Sidebar";
 import FavoriteIcon from "@mui/icons-material/Favorite";
 import LocalMallOutlinedIcon from "@mui/icons-material/LocalMallOutlined";
 import { Watches } from "../data/watches";
-import { useReducer, useState } from "react";
+import { useReducer } from "react";
 const FilterWatchMan = () => {
   const filteredWatches = Watches.filter((watch) => watch.gender === "man");
   const [favoriteIds, dispatch] = useReducer((state, action) => {
