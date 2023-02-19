@@ -8,7 +8,7 @@ export const LabelInput = ({
   onChange = "",
 }) => {
   return (
-    <div class="flex flex-col mt-4 ">
+    <div class="flex flex-col mt-4 iPad:w-[40%] iPad:mb-4">
       <label for={forId} class="text-form">
         {title}
       </label>
@@ -88,11 +88,11 @@ function SignUp() {
       <div class="absolute w-full h-full bg-black/70 flex justify-center items-center">
         <div class="w-4/5 h-[90%]">
           <div class="text-center text-white">
-            <h4 class="text-Main-text text-2xl font-bold">TimeKeepers</h4>
-            <p class="text-Main-text text-xl mt-6">Sign Up</p>
+            <h4 class="text-Main-text text-2xl font-bold iPad:text-5xl">TimeKeepers</h4>
+            <p class="text-Main-text text-xl mt-6 iPad:text-3xl iPad:mt-10 iPad:mb-10">Sign Up</p>
           </div>
           <div class="mt-2">
-            <form class="flex flex-col">
+            <form class="flex flex-col iPad:flex-row iPad:flex-wrap iPad:justify-between">
               <LabelInput
                 title="Name"
                 forId="name"
@@ -141,18 +141,21 @@ function SignUp() {
                   {errorSecondPassword}
                 </p>
               )}
-              <a
-                class="bg-form mt-6 rounded-lg text-Main-text p-2 text-center cursor-pointer transition-all hover:bg-red-500 hover:scale-105"
-                onClick={checkAll}
-              >
-                Sign up
-              </a>
             </form>
-          </div>
           <div class="mt-3">
-            <p class="text-Main-text flex flex-row justify-between">
+            <a
+              class="bg-form mt-6 rounded-lg text-Main-text p-2 text-center cursor-pointer transition-all hover:bg-red-500 hover:scale-105 iPad:block iPad:w-3/4 iPad:mx-auto iPad:my-20 iPad:py-5 iPad:font-medium iPad:tracking-wider"
+              onClick={checkAll}
+            >
+              Sign up
+            </a>
+          </div>
+            <p class="text-Main-text flex flex-row justify-between iPad:justify-center">
               Have an Account?{" "}
-              <a href="/login" class="text-form cursor-pointer hover:text-red-700 transition-colors">
+              <a
+                href="/login"
+                class="text-form cursor-pointer hover:text-red-700 transition-colors iPad:ml-8"
+              >
                 Sign In
               </a>
             </p>
