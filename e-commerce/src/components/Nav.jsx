@@ -36,7 +36,7 @@ function Nav() {
         <MenuIcon onClick={handleClick} />
       </div>
       <div class="w-1/2">
-        <ul class="flex flex-row justify-between items-center">
+        <ul class="flex flex-row justify-between items-center iPad:ml-32 iPad:w-1/2">
           <li>
             <label class="switch">
               <input type="checkbox" />
