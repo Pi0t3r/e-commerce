@@ -5,6 +5,7 @@ module.exports = {
     screens: {
       iphoneSe: "320px",
       Gfold: "280px",
+      iPad:"768px"
     },
     extend: {
       backgroundImage: {
