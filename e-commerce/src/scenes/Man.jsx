@@ -76,7 +76,7 @@ function Man() {
       <Nav />
       <Sidebar />
       <div>
-        <div class="w-full mt-40 iPad:mt-24">
+        <div class="w-full mt-20 iPad:mt-24">
           <h3 class="text-paragraph uppercase italic text-center text-3xl iPad:pb-40 iPad:text-5xl">
             Man
           </h3>
