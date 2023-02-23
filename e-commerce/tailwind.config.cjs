@@ -3,9 +3,8 @@ module.exports = {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     screens: {
-      iphoneSe: "320px",
       Gfold: "280px",
-      iPad:"768px"
+      tablet:"768px"
     },
     extend: {
       backgroundImage: {

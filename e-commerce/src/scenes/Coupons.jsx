@@ -9,7 +9,7 @@ function Coupons() {
       <div class="bg-ItemHeader6 bg-cover bg-center w-screen h-screen">
         <div class="absolute w-full h-full bg-black/70">
           <div class="mt-24 text-center">
-            <h2 class="text-paragraph text-4xl italic">Your coupons</h2>
+            <h2 class="text-paragraph text-4xl italic tablet:text-5xl">Your coupons</h2>
           </div>
           <div class="flex flex-col justify-center mt-2 mx-2 ">
             <Coupon
