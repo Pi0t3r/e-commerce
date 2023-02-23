@@ -8,7 +8,7 @@ import ErrorOutlineOutlinedIcon from "@mui/icons-material/ErrorOutlineOutlined";
 import SendOutlinedIcon from "@mui/icons-material/SendOutlined";
 const List = ({ icon, text, href }) => {
   return (
-    <li class="w-full leading-[2.7rem] cursor-pointer h-20">
+    <li class="w-full leading-[2.7rem] cursor-pointer h-20 tablet:text-2xl tablet:leading-[4rem]">
       <a
         href={href}
         class="w-full flex flex-row justify-between items-center relative z-10 text-paragraph"
@@ -28,17 +28,17 @@ function Settings() {
   return (
     <div class="bg-ItemHeader2 bg-cover bg-center w-screen h-screen bg-fixed">
       <div class="bg-black/90 absolute inset-0">
-        <div class="absolute top-0 text-Main-text p-2">
+        <div class="absolute top-0 text-Main-text p-2 tablet:p-6">
           <a href="/" class="hover:text-neutral-500 transition-colors pt-2">
             <KeyboardBackspaceIcon />
           </a>
         </div>
-        <div class="text-paragraph text-center italic uppercase mt-20 text-4xl">
+        <div class="text-paragraph text-center font-medium uppercase mt-20 text-4xl tablet:text-5xl">
           <h3>Settings</h3>
         </div>
         <div class="mx-5 mt-24">
           <ul>
-            <p class="uppercase text-paragraph font-medium my-2">General</p>
+            <p class="uppercase text-paragraph font-medium my-2 tablet:text-2xl">General</p>
             <List
               icon={<PersonOutlinedIcon />}
               text="Account"
@@ -53,7 +53,7 @@ function Settings() {
             <List icon={<DeleteOutlinedIcon />} text="Delete" href="/Account" />
           </ul>
           <ul>
-            <p class="uppercase text-paragraph font-medium my-2">Feedback</p>
+            <p class="uppercase text-paragraph font-medium my-2 tablet:text-2xl">Feedback</p>
             <List
               icon={<ErrorOutlineOutlinedIcon />}
               text="Report a bug"
