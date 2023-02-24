@@ -29,7 +29,7 @@ function Basket() {
               <input
                 type="text"
                 placeholder="Apply"
-                class="bg-transparent h-20 font-bold tablet:text-4xl tablet:w-2/3 border-transparent"
+                class="bg-transparent h-20 font-bold tablet:text-4xl tablet:w-2/3 border-transparent outline-none"
               />
             </div>
           </div>
