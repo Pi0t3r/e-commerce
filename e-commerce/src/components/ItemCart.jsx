@@ -1,10 +1,25 @@
 import DeleteForeverOutlinedIcon from "@mui/icons-material/DeleteForeverOutlined";
-
-const Button = ({ text }) => {
-  return <button class="text-paragraph font-bold text-xl">{text}</button>;
+import { useState } from "react";
+const Button = ({ text, onClick }) => {
+  return (
+    <button onClick={onClick} class="text-paragraph font-bold text-xl">
+      {text}
+    </button>
+  );
 };
 
-function ItemCart({ name, money, code }) {
+function ItemCart({ name, price, code, pricePerWatch }) {
+  const [count, setCount] = useState(1);
+  const [money, setMoney] = useState(price);
+  const increment = () => {
+    setCount(count + 1);
+    setMoney(pricePerWatch + money);
+  };
+
+  const decrement = () => {
+    setCount(count - 1);
+    setMoney(money - pricePerWatch);
+  };
   return (
     <div class="w-full h-40 flex flex-row px-2 my-4">
       <div class="w-1/2 h-full flex items-center justify-center">
@@ -23,9 +38,9 @@ function ItemCart({ name, money, code }) {
         <div class="flex flex-row justify-between mt-6 items-center text-Main-text">
           <p class="font-medium text-xl">${money}</p>
           <div class="flex flex-row mr-5 w-[40%] justify-between items-center">
-            <Button text="-" />
-            <p class="font-medium text-xl">1</p>
-            <Button text="+" />
+            <Button text="-" onClick={decrement} />
+            <p class="font-medium text-xl">{count}</p>
+            <Button text="+" onClick={increment} />
           </div>
         </div>
       </div>
